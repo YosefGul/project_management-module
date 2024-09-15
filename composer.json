@@ -1,6 +1,13 @@
 {
     "name": "visiosoft/project_management-module",
     "type": "streams-addon",
+    "authors": [
+        {
+            "name": "Yusuf İhsan Gül",
+            "email": "yusufihsan059@gmail.com",
+            "role": "Owner"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Visiosoft\\ProjectManagementModule\\": "src/"
