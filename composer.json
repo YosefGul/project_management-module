@@ -1,0 +1,9 @@
+{
+    "name": "visiosoft/project_management-module",
+    "type": "streams-addon",
+    "autoload": {
+        "psr-4": {
+            "Visiosoft\\ProjectManagementModule\\": "src/"
+        }
+    }
+}
