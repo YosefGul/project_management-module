@@ -16,6 +16,11 @@ class PartsSubImageFormBuilder extends FormBuilder
             'label'  => 'Part Alt Resim',
             'required' => true,
         ],
+        'quantity' => [
+            'type'   => 'anomaly.field_type.integer',
+            'label'  => 'Miktar',
+            'required' => true,
+        ],
         'ProjectMainPart' => [
             'type'    => 'anomaly.field_type.relationship',
             'config' => [

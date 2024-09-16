@@ -34,6 +34,9 @@ class ProjectTableBuilder extends TableBuilder
         'entry.company.name' => [
             'heading' => 'Firma',
         ],
+        'entry.status.name' => [
+            'heading' => 'Status',
+        ],
     ];
 
     /**

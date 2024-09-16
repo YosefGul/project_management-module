@@ -35,7 +35,16 @@ class ProjectFormBuilder extends FormBuilder
         'images' => [
             'type' => 'anomaly.field_type.text',
             'label' => 'Resimler',
-        ]
+        ],
+        'status' => [
+            'type' => 'anomaly.field_type.select',  // Durum
+            'config' => [
+                'options' => [
+                    'in_progress' => 'Devam Ediyor',
+                    'completed' => 'Tamamlandı',
+                ],
+            ],
+        ],
     ];
 
 

@@ -26,7 +26,10 @@ class PartsSubImageTableBuilder extends TableBuilder
      */
     protected $columns = [
         'entry.PartSubImageNumber' => [
-            'heading' => 'Proje Numarası',
+            'heading' => 'Alt Resim Numarası',
+        ],
+        'entry.quantity' => [
+            'heading' => 'Parça Miktarı',
         ],
         'entry.ProjectMainPart.name' => [
             'heading' => 'Part Ana Resim',
