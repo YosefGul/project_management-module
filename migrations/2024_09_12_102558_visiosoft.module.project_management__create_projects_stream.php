@@ -55,15 +55,7 @@ class VisiosoftModuleProjectManagementCreateProjectsStream extends Migration
         'company' => ['required' => true],
         'excel_file' => ['required' => false],
         'images' => ['required' => false],
-        'part' => ['required' => true],
-        'main_image_no' => ['required' => true],  // Ana Parça Resim No zorunlu
-        'sub_image_no' => ['required' => true],  // Ana Parça Resim No zorunlu
-        'miktar' => ['required' => false],
         'status' => ['required' => true],
-        'control_result' => ['required' => false],
-        'control_description' => ['required' => false],
-        'error_image' => ['required' => false],
-        'control_approved' => ['required' => false],
     ];
 
 

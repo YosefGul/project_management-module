@@ -44,4 +44,13 @@ return [
             'delete' => 'Can delete parts sub image?',
         ],
     ],
+    
+    'quality_activity' => [
+        'name'   => 'Quality activity',
+        'option' => [
+            'read'   => 'Can read quality activity?',
+            'write'  => 'Can create/edit quality activity?',
+            'delete' => 'Can delete quality activity?',
+        ],
+    ],
 ];

@@ -19,4 +19,8 @@ return [
     'parts_sub_image' => [
         'title' => 'Parts sub image',
     ],
+   
+    'quality_activity' => [
+        'title' => 'Quality activity',
+    ],
 ];

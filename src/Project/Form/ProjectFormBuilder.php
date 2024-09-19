@@ -44,6 +44,7 @@ class ProjectFormBuilder extends FormBuilder
                     'completed' => 'Tamamlandı',
                 ],
             ],
+            'label' => 'Proje Durumu',
         ],
     ];
 
