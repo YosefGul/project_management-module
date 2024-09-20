@@ -50,11 +50,12 @@ class ProjectManagementModule extends Module
                 'new_parts_sub_image',
             ],
         ],
-
-
-
-
-
+        'quality_activity' => [
+            'buttons' => [
+                'new_quality_activity',
+            ],
+        ],
+        
     ];
 
 }

@@ -31,7 +31,6 @@ class VisiosoftModuleProjectManagementCreatePartsStream extends Migration
 
     protected $fields = [
         'part_name' => 'anomaly.field_type.text',  // Proje Numarası
-        'part_number' => 'anomaly.field_type.text',  // Proje Numarası
         'project' => [
             'type' => 'anomaly.field_type.relationship',  // Firma Seçimi
             'config' => [
@@ -48,9 +47,6 @@ class VisiosoftModuleProjectManagementCreatePartsStream extends Migration
      */
     protected $assignments = [
         'part_name' => [
-            'required' => true,
-        ],
-        'part_number' => [
             'required' => true,
         ],
         'project' => [

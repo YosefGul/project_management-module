@@ -29,4 +29,9 @@ return [
         'write',
         'delete',
     ],
+    'quality_activity' => [
+        'read',
+        'write',
+        'delete',
+    ],
 ];

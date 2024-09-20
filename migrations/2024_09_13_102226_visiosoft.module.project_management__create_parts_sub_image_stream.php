@@ -30,6 +30,7 @@ class VisiosoftModuleProjectManagementCreatePartsSubImageStream extends Migratio
 
     protected $fields = [
         'PartSubImageNumber' => 'anomaly.field_type.text',  // Proje Numarası
+        'quantity' => 'anomaly.field_type.text',  // Proje Numarası
         'ProjectMainPart' => [
             'type' => 'anomaly.field_type.relationship',  // Firma Seçimi
             'config' => [
@@ -46,6 +47,9 @@ class VisiosoftModuleProjectManagementCreatePartsSubImageStream extends Migratio
      */
     protected $assignments = [
         'PartSubImageNumber' => [
+            'required' => true,
+        ],
+        'quantity' => [
             'required' => true,
         ],
         'ProjectMainPart' => [

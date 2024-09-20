@@ -28,9 +28,6 @@ class PartTableBuilder extends TableBuilder
         'entry.part_name' => [
             'heading' => 'Proje Tanımı',
         ],
-        'entry.part_number' => [
-            'heading' => 'Proje Numarası',
-        ],
         'entry.project.name' => [
             'heading' => 'Project',
         ],

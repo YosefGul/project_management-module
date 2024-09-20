@@ -1,6 +1,7 @@
 <?php namespace Visiosoft\ProjectManagementModule;
 
 use Anomaly\Streams\Platform\Addon\AddonServiceProvider;
+use Anomaly\Streams\Platform\Model\ProjectManagement\ProjectManagementQualityActivityEntryModel;
 use Visiosoft\ProjectManagementModule\PartsSubImage\Contract\PartsSubImageRepositoryInterface;
 use Visiosoft\ProjectManagementModule\PartsSubImage\PartsSubImageRepository;
 use Anomaly\Streams\Platform\Model\ProjectManagement\ProjectManagementPartsSubImageEntryModel;
@@ -22,6 +23,10 @@ use Visiosoft\ProjectManagementModule\Company\CompanyRepository;
 use Anomaly\Streams\Platform\Model\ProjectManagement\ProjectManagementCompaniesEntryModel;
 use Visiosoft\ProjectManagementModule\Company\CompanyModel;
 use Illuminate\Routing\Router;
+use Visiosoft\ProjectManagementModule\QualityActivity\Contract\QualityActivityRepositoryInterface;
+use Visiosoft\ProjectManagementModule\QualityActivity\QualityActivityModel;
+use Visiosoft\ProjectManagementModule\QualityActivity\QualityActivityRepository;
+
 
 class ProjectManagementModuleServiceProvider extends AddonServiceProvider
 {
@@ -75,7 +80,9 @@ class ProjectManagementModuleServiceProvider extends AddonServiceProvider
         'admin/project_management'           => 'Visiosoft\ProjectManagementModule\Http\Controller\Admin\CompaniesController@index',
         'admin/project_management/create'    => 'Visiosoft\ProjectManagementModule\Http\Controller\Admin\CompaniesController@create',
         'admin/project_management/edit/{id}' => 'Visiosoft\ProjectManagementModule\Http\Controller\Admin\CompaniesController@edit',
-
+        'admin/project_management/quality'           => 'Visiosoft\ProjectManagementModule\Http\Controller\Admin\QualityActivityController@index',
+        'admin/project_management/quality/create'    => 'Visiosoft\ProjectManagementModule\Http\Controller\Admin\QualityActivityController@create',
+        'admin/project_management/quality/edit/{id}' => 'Visiosoft\ProjectManagementModule\Http\Controller\Admin\QualityActivityController@edit',
     ];
 
     /**
@@ -131,6 +138,7 @@ class ProjectManagementModuleServiceProvider extends AddonServiceProvider
      * @type array|null
      */
     protected $bindings = [
+        ProjectManagementQualityActivityEntryModel::class => QualityActivityModel::class,
         ProjectManagementPartsSubImageEntryModel::class => PartsSubImageModel::class,
         ProjectManagementPartsMainImageEntryModel::class => PartsMainImageModel::class,
         ProjectManagementPartsEntryModel::class => PartModel::class,
@@ -144,6 +152,7 @@ class ProjectManagementModuleServiceProvider extends AddonServiceProvider
      * @type array|null
      */
     protected $singletons = [
+        QualityActivityRepositoryInterface::class => QualityActivityRepository::class,
         PartsSubImageRepositoryInterface::class => PartsSubImageRepository::class,
         PartsMainImageRepositoryInterface::class => PartsMainImageRepository::class,
         PartRepositoryInterface::class => PartRepository::class,

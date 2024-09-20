@@ -16,11 +16,7 @@ class PartFormBuilder extends FormBuilder
             'label'  => 'Part Tanımı',
             'required' => true,
         ],
-        'part_number' => [
-            'type'   => 'anomaly.field_type.text',
-            'label'  => 'Part Numarası',
-            'required' => true,
-        ],
+
         'project' => [
             'type'    => 'anomaly.field_type.relationship',
             'config' => [
