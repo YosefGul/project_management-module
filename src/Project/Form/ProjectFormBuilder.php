@@ -27,6 +27,13 @@ class ProjectFormBuilder extends FormBuilder
                 'mode' => 'lookup',
             ],
             'label'   => 'Firma',
+        ], 'user' => [
+            'type'    => 'anomaly.field_type.relationship',
+            'config' => [
+                'related' => 'Anomaly\UsersModule\User\UserModel',
+                'mode' => 'lookup',
+            ],
+            'label'   => 'Kullanici Seçimi',
         ],
         'excel_file' => [
             'type' => 'anomaly.field_type.text',
