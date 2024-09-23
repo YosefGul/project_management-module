@@ -17,9 +17,9 @@ class QualityActivityController extends AdminController
      */
     public function index(QualityActivityTableBuilder $table)
     {
-        $table->on('querying', function ($query) {
-            $query->with('user');
-        });
+//        $table->on('querying', function ($query) {
+//            $query->with('user');
+//        });
 
         return $table->render();
     }

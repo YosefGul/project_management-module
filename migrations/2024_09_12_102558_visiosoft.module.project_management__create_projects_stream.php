@@ -34,6 +34,12 @@ class VisiosoftModuleProjectManagementCreateProjectsStream extends Migration
                 'related' => 'Visiosoft\\ProjectManagementModule\\Company\\CompanyModel',
                 'mode' => 'lookup',
             ],
+        ],'user' => [
+            'type' => 'anomaly.field_type.relationship',  // Firma Seçimi
+            'config' => [
+                'related' => 'Anomaly\\UsersModule\\User\\UserModel',
+                'mode' => 'lookup',
+            ],
         ],
         'excel_file' => 'anomaly.field_type.text',  // Excel Dosyası
         'images' => 'anomaly.field_type.text',  // Resimler
@@ -52,6 +58,7 @@ class VisiosoftModuleProjectManagementCreateProjectsStream extends Migration
     protected $assignments = [
         'project_number' => ['required' => true, 'unique' => true],
         'description' => ['required' => false],
+        'user' => ['required' => false],
         'company' => ['required' => true],
         'excel_file' => ['required' => false],
         'images' => ['required' => false],

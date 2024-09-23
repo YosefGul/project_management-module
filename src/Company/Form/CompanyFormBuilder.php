@@ -10,7 +10,21 @@ class CompanyFormBuilder extends FormBuilder
      *
      * @var array|string
      */
-    protected $fields = [];
+    protected $fields = [
+        'name' => [
+            'type'   => 'anomaly.field_type.text',
+            'label'  => 'Firma Adı',
+            'required' => true,
+        ],
+        'description' => [
+            'type'   => 'anomaly.field_type.textarea',
+            'label'  => 'Firma Açıklaması',
+        ],
+        'logo' => [
+            'type' => 'anomaly.field_type.file',
+            'label' => 'Firma Logosu',
+        ],
+    ];
 
     /**
      * Additional validation rules.

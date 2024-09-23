@@ -24,7 +24,15 @@ class CompanyTableBuilder extends TableBuilder
      *
      * @var array|string
      */
-    protected $columns = [];
+    protected $columns = [
+        'entry.name' => [
+            'heading' => 'Firma Adı',
+        ],
+        'entry.description' => [
+            'heading' => 'Firma Açıklaması',
+        ],
+
+    ];
 
     /**
      * The table buttons.

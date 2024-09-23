@@ -25,13 +25,18 @@ class QualityActivityTableBuilder extends TableBuilder
      * @var array|string
      */
     protected $columns = [
-        'entry.PartSubImageNumber',
-
-        'entry.action_id',
-        'entry.general_description',
-        'entry.image_upload',  // Yüklenen Resim
-        'entry.image_capture', // Çekilen Resim
-        'entry.created_at',
+        'entry.PartSubImageNumber' => [
+            'heading' => 'Alt Resim No',
+        ],
+        'entry.action_id'  => [
+            'heading' => 'Parça Durumu',
+        ],
+        'entry.general_description' => [
+            'heading' => 'Açıklaması',
+        ],
+        'entry.created_at' => [
+            'heading' => 'Oluşturma Tarihi',
+        ],
     ];
 
     /**
